@@ -27,7 +27,7 @@ $wgExtensionCredits['other'][] = array(
 	),
 	'version'  => '0.1.0',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SearchStats',
-	'descriptionmsg' => 'Tracks internal searches to allow identifing commonally seeked pages on the wiki.',
+	'description' => 'Tracks internal searches to allow identifing commonally seeked pages on the wiki.',
 );
 
 /* Setup */
