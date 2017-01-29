@@ -27,10 +27,12 @@ $wgExtensionCredits['other'][] = array(
 	),
 	'version'  => '0.1.0',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SearchStats',
-	'description' => 'Tracks internal searches to allow identifing commonally seeked pages on the wiki.',
+	'descriptionmsg' => 'searchstats-desc',
 );
 
 /* Setup */
+
+$wgMessagesDirs['SearchStats'] = __DIR__ . '/i18n';
 
 // Autoload classes
 $wgAutoloadClasses['SpecialSearchStats'] = __DIR__ . '/SpecialSearchStats.php'; # Location of the SpecialSearchStats class (Tell MediaWiki to load this file)
