@@ -33,6 +33,7 @@ $wgExtensionCredits['other'][] = array(
 /* Setup */
 
 $wgMessagesDirs['SearchStats'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['SearchStatsAlias'] = __DIR__ . '/SearchStats.alias.php';
 
 // Autoload classes
 $wgAutoloadClasses['SpecialSearchStats'] = __DIR__ . '/SpecialSearchStats.php'; # Location of the SpecialSearchStats class (Tell MediaWiki to load this file)
