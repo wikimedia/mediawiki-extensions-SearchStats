@@ -2,14 +2,14 @@
 /**
  * SearchStats extension
  *
- * For more info see http://mediawiki.org/wiki/Extension:SearchStats
+ * For more info see https://mediawiki.org/wiki/Extension:SearchStats
  *
  * @file
  * @ingroup Extensions
  * @author Steven Orvis, 2016
  * @license GNU General Public Licence 2.0 or later
  */
- 
+
  # Alert the user that this is not a valid access point to MediaWiki if they try to access the special pages file directly.
 if ( !defined( 'MEDIAWIKI' ) ) {
 	echo <<<EOT
@@ -50,4 +50,3 @@ $wgHooks['SpecialSearchNogomatch'][] = 'SearchStatsHooks::onSpecialSearchNogomat
 $wgSpecialPages['SearchStats'] = 'SpecialSearchStats'; # Tell MediaWiki about the new special page and its class name
 
 /* Configuration */
-

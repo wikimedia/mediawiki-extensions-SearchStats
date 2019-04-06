@@ -2,7 +2,7 @@
 /**
  * SearchStats extension
  *
- * For more info see http://mediawiki.org/wiki/Extension:SearchStats
+ * For more info see https://mediawiki.org/wiki/Extension:SearchStats
  *
  * @file
  * @ingroup Extensions
