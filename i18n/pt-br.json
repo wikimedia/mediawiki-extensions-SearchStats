@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
-	"searchstats-desc": "Acompanha buscas internas para identificar páginas normalmente pesquisadas na wiki"
+	"searchstats-desc": "Acompanha buscas internas para identificar páginas normalmente pesquisadas na wiki",
+	"searchstats": "Estatísticas de pesquisa"
 }

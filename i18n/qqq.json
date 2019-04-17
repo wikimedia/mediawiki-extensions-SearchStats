@@ -1,5 +1,9 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Umherirrender"
+		]
+	},
 	"searchstats-desc": "{{desc|name=Search Stats|url=https://www.mediawiki.org/wiki/Extension:SearchStats}}",
-	"searchstats": "Search Stats"
+	"searchstats": "{{doc-special}}"
 }
