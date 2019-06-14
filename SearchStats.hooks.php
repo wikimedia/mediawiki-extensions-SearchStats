@@ -7,7 +7,7 @@
  */
 
 class SearchStatsHooks {
-	
+
 	/**
 	 * Add search_query table
 	 */
@@ -16,14 +16,14 @@ class SearchStatsHooks {
 			__DIR__ . '/table.sql' );
 		return true;
 	}
-	
+
 	/**
 	 * A search was done that went directly to a page
 	 * https://www.mediawiki.org/wiki/Manual:Hooks/SpecialSearchCreateLink
 	 */
-	public static function onSpecialSearchCreateLink( $t, &$params ) { 
+	public static function onSpecialSearchCreateLink( $t, &$params ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->insert( 'search_query', 
+		$dbw->insert( 'search_query',
 			[ [ 'sq_query' => $t ] ],
 			__METHOD__,
 			[]
@@ -33,11 +33,11 @@ class SearchStatsHooks {
 	/**
 	 * A search was done that found no match
 	 * https://www.mediawiki.org/wiki/Manual:Hooks/SpecialSearchNogomatch
-	 */	
-	public static function onSpecialSearchNogomatch( &$title ) { 
+	 */
+	public static function onSpecialSearchNogomatch( &$title ) {
 	/*
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->insert( 'search_query', 
+		$dbw->insert( 'search_query',
 			array(array('sq_query' => $title)),
 			__METHOD__,
 			array()
