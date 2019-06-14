@@ -40,8 +40,7 @@ class SpecialSearchStats extends SpecialPage {
 		}
 	}
 
-	private function displayRecentSearches($dbr)
-	{
+	private function displayRecentSearches($dbr) {
 		$wikitext = '';
 
 		# Display the recent searches
@@ -62,8 +61,7 @@ class SpecialSearchStats extends SpecialPage {
 		return $wikitext;
 	}
 
-	private function displayCommonSearches($dbr)
-	{
+	private function displayCommonSearches($dbr) {
 		$wikitext = '';
 
 				# Display the most common searches
