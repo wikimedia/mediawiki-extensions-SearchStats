@@ -26,9 +26,9 @@ class SearchStatsHooks {
 	{
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert( 'search_query', 
-			array(array('sq_query' => $t)),
+			[['sq_query' => $t]],
 			__METHOD__,
-			array()
+			[]
 			);
 	}
 
