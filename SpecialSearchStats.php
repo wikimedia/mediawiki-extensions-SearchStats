@@ -7,7 +7,7 @@
  * @file
  * @ingroup Extensions
  * @author Steven Orvis, 2016
- * @license GNU General Public Licence 2.0 or later
+ * @license GPL-2.0-or-later
  */
 
 class SpecialSearchStats extends SpecialPage {
