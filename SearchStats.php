@@ -19,16 +19,16 @@ EOT;
 	exit( 1 );
 }
 
-$wgExtensionCredits['other'][] = array(
+$wgExtensionCredits['other'][] = [
 	'path' => __FILE__,
 	'name' => 'Search Stats',
-	'author' => array(
+	'author' => [
 		'Steven Orvis',
-	),
+	],
 	'version'  => '0.1.0',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SearchStats',
 	'descriptionmsg' => 'searchstats-desc',
-);
+];
 
 /* Setup */
 

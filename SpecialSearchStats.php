@@ -49,10 +49,10 @@ class SpecialSearchStats extends SpecialPage {
 		# Get the recent searches
 		$recentStats = $dbr->select(
 					'search_query', 								# table
-					array('sq_id', 'sq_query', 'sq_timestamp'), 	# columns
+					['sq_id', 'sq_query', 'sq_timestamp'], 	# columns
 					'', 											# conditions
 					__METHOD__,
-					array('ORDER BY' => 'sq_id DESC LIMIT 10')		# options
+					['ORDER BY' => 'sq_id DESC LIMIT 10']		# options
 		);
 
 		foreach( $recentStats as $row){
@@ -72,11 +72,11 @@ class SpecialSearchStats extends SpecialPage {
 		# Get the top searches
 		$recentStats = $dbr->select(
 					'search_query', 								# table
-					array('count(*) AS QUERYCOUNT', 'sq_query', ), 	# columns
+					['count(*) AS QUERYCOUNT', 'sq_query', ], 	# columns
 					'', 											# conditions
 					__METHOD__,
-					array( 'GROUP BY' => 'sq_query',
-					'ORDER BY' => 'QUERYCOUNT DESC LIMIT 10')		# options
+					[ 'GROUP BY' => 'sq_query',
+					'ORDER BY' => 'QUERYCOUNT DESC LIMIT 10']		# options
 		);
 
 		# Start a table to display data in
