@@ -24,7 +24,7 @@ class SpecialSearchStats extends SpecialPage {
 		$param = $request->getText( 'param' );
 
 		# Get database connection
-		$dbr = wfGetDB(DB_SLAVE);
+		$dbr = wfGetDB(DB_REPLICA);
 
 		$wikitext = '';
 
