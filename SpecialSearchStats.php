@@ -24,12 +24,12 @@ class SpecialSearchStats extends SpecialPage {
 		$param = $request->getText( 'param' );
 
 		# Get database connection
-		$dbr = wfGetDB(DB_REPLICA);
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$wikitext = '';
 
-		$wikitext .= $this->displayRecentSearches($dbr);
-		$wikitext .= $this->displayCommonSearches($dbr);
+		$wikitext .= $this->displayRecentSearches( $dbr );
+		$wikitext .= $this->displayCommonSearches( $dbr );
 
 		# Write the page
 		if ( method_exists( $output, 'addWikiTextAsInterface' ) ) {
@@ -40,7 +40,7 @@ class SpecialSearchStats extends SpecialPage {
 		}
 	}
 
-	private function displayRecentSearches($dbr) {
+	private function displayRecentSearches( $dbr ) {
 		$wikitext = '';
 
 		# Display the recent searches
@@ -48,20 +48,20 @@ class SpecialSearchStats extends SpecialPage {
 		# Get the recent searches
 		$recentStats = $dbr->select(
 					'search_query', 								# table
-					['sq_id', 'sq_query', 'sq_timestamp'], 	# columns
+					[ 'sq_id', 'sq_query', 'sq_timestamp' ], 	# columns
 					'', 											# conditions
 					__METHOD__,
-					['ORDER BY' => 'sq_id DESC LIMIT 10']		# options
+					[ 'ORDER BY' => 'sq_id DESC LIMIT 10' ]		# options
 		);
 
-		foreach( $recentStats as $row){
+		foreach ( $recentStats as $row ) {
 			$wikitext .= "* '''" . $row->sq_query . "''' ''at " . $row->sq_timestamp . "'' \n";
 		}
 
 		return $wikitext;
 	}
 
-	private function displayCommonSearches($dbr) {
+	private function displayCommonSearches( $dbr ) {
 		$wikitext = '';
 
 				# Display the most common searches
@@ -70,18 +70,18 @@ class SpecialSearchStats extends SpecialPage {
 		# Get the top searches
 		$recentStats = $dbr->select(
 					'search_query', 								# table
-					['count(*) AS QUERYCOUNT', 'sq_query', ], 	# columns
+					[ 'count(*) AS QUERYCOUNT', 'sq_query', ], 	# columns
 					'', 											# conditions
 					__METHOD__,
 					[ 'GROUP BY' => 'sq_query',
-					'ORDER BY' => 'QUERYCOUNT DESC LIMIT 10']		# options
+					'ORDER BY' => 'QUERYCOUNT DESC LIMIT 10' ]		# options
 		);
 
 		# Start a table to display data in
 		$wikitext .= "{| class=\"wikitable sortable\" \n !Term \n !Times \n";
 
 		# Output the table
-		foreach( $recentStats as $row){
+		foreach ( $recentStats as $row ) {
 			$wikitext .= "|- \n |" . $row->sq_query . "\n |" . $row->QUERYCOUNT . " \n";
 		}
 

@@ -11,7 +11,7 @@ class SearchStatsHooks {
 	/**
 	 * Add search_query table
 	 */
-	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater) {
+	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater ) {
 		$updater->addExtensionTable( 'search_query',
 			__DIR__ . '/table.sql' );
 		return true;
@@ -24,7 +24,7 @@ class SearchStatsHooks {
 	public static function onSpecialSearchCreateLink( $t, &$params ) { 
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert( 'search_query', 
-			[['sq_query' => $t]],
+			[ [ 'sq_query' => $t ] ],
 			__METHOD__,
 			[]
 			);
