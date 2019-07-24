@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm"
+			"Elisardojm",
+			"Maria zaos"
 		]
 	},
-	"searchstats-desc": "Da seguimento ás procuras internas para identificar as páxinas buscadas habitualmente na wiki"
+	"searchstats-desc": "Dá seguimento ás procuras internas para identificar as páxinas procuradas habitualmente na wiki"
 }
