@@ -12,3 +12,13 @@ $specialPageAliases = [];
 $specialPageAliases['en'] = [
 	'SearchStats' => [ 'SearchStats' ],
 ];
+
+/** Serbian Cyrillic (српски (ћирилица)) */
+$specialPageAliases['sr-ec'] = [
+	'SearchStats' => [ 'СтатистикеПретраге' ],
+];
+
+/** Serbian Latin (srpski (latinica)) */
+$specialPageAliases['sr-el'] = [
+	'SearchStats' => [ 'StatistikePretrage' ],
+];
