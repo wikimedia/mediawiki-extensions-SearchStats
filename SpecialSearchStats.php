@@ -10,11 +10,14 @@
  * @license GPL-2.0-or-later
  */
 
+use Wikimedia\Rdbms\IDatabase;
+
 class SpecialSearchStats extends SpecialPage {
 	function __construct() {
 		parent::__construct( 'SearchStats' );
 	}
 
+	/** @inheritDoc */
 	function execute( $par ) {
 		$request = $this->getRequest();
 		$output = $this->getOutput();
@@ -40,6 +43,10 @@ class SpecialSearchStats extends SpecialPage {
 		}
 	}
 
+	/**
+	 * @param IDatabase $dbr
+	 * @return string
+	 */
 	private function displayRecentSearches( $dbr ) {
 		$wikitext = '';
 
@@ -61,6 +68,10 @@ class SpecialSearchStats extends SpecialPage {
 		return $wikitext;
 	}
 
+	/**
+	 * @param IDatabase $dbr
+	 * @return string
+	 */
 	private function displayCommonSearches( $dbr ) {
 		$wikitext = '';
 
