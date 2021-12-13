@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Sabelöga"
 		]
 	},
+	"searchstats-desc": "Spårar interna sökningar för identifiera vanliga sidor som ofta söks efter på wikin.",
 	"searchstats": "Sök statstik"
 }
