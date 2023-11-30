@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Umherirrender"
+			"Umherirrender",
+			"McDutchie"
 		]
 	},
 	"searchstats-desc": "{{desc|name=Search Stats|url=https://www.mediawiki.org/wiki/Extension:SearchStats}}",
-	"searchstats": "{{doc-special}}"
+	"searchstats": "'''Refers to statistics on frequently searched pages.'''\n{{doc-special}}"
 }
