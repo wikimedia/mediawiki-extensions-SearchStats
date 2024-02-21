@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Anterdc99"
 		]
 	},
-	"searchstats-desc": "追踪内部搜索以识别一般在wiki上搜索的页面"
+	"searchstats-desc": "追踪内部搜索以识别一般在wiki上搜索的页面",
+	"searchstats": "搜索统计"
 }
