@@ -54,9 +54,9 @@ class SpecialSearchStats extends SpecialPage {
 		$wikitext .= "==Recent Searches With No Direct Match==\n";
 		# Get the recent searches
 		$recentStats = $dbr->select(
-					'search_query', 								# table
-					[ 'sq_id', 'sq_query', 'sq_timestamp' ], 	# columns
-					'', 											# conditions
+					'search_query', # table
+					[ 'sq_id', 'sq_query', 'sq_timestamp' ], # columns
+					'', # conditions
 					__METHOD__,
 					[ 'ORDER BY' => 'sq_id DESC LIMIT 10' ]		# options
 		);
@@ -80,9 +80,9 @@ class SpecialSearchStats extends SpecialPage {
 
 		# Get the top searches
 		$recentStats = $dbr->select(
-					'search_query', 								# table
-					[ 'count(*) AS QUERYCOUNT', 'sq_query', ], 	# columns
-					'', 											# conditions
+					'search_query', # table
+					[ 'count(*) AS QUERYCOUNT', 'sq_query', ], # columns
+					'', # conditions
 					__METHOD__,
 					[ 'GROUP BY' => 'sq_query',
 					'ORDER BY' => 'QUERYCOUNT DESC LIMIT 10' ]		# options
