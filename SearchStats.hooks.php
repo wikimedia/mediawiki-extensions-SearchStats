@@ -26,7 +26,7 @@ class SearchStatsHooks {
 	 * @param array &$params
 	 */
 	public static function onSpecialSearchCreateLink( $t, &$params ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->insert( 'search_query',
 			[ [ 'sq_query' => $t ] ],
 			__METHOD__,
@@ -41,7 +41,7 @@ class SearchStatsHooks {
 	 */
 	public static function onSpecialSearchNogomatch( &$title ) {
 	/*
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->insert( 'search_query',
 			array(array('sq_query' => $title)),
 			__METHOD__,
