@@ -10,6 +10,7 @@
  * @license GPL-2.0-or-later
  */
 
+use MediaWiki\MediaWikiServices;
 use Wikimedia\Rdbms\IDatabase;
 
 class SpecialSearchStats extends SpecialPage {
@@ -27,7 +28,7 @@ class SpecialSearchStats extends SpecialPage {
 		$param = $request->getText( 'param' );
 
 		# Get database connection
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$wikitext = '';
 
