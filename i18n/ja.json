@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Otokoume"
+			"Otokoume",
+			"Tensama0415"
 		]
 	},
-	"searchstats-desc": "ウィキの内部検索を追跡して、よく検索されるページを特定する"
+	"searchstats-desc": "ウィキの内部検索を追跡して、よく検索されるページを特定する",
+	"searchstats": "検索統計"
 }
